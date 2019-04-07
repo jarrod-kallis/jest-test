@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 const { starWarsPerson, potentialEnergy } = require('./index');
 
 const fakeFetch = url => {
+  expect(url).toBe('https://swapi.co/api/people/1');
+
   return Promise.resolve({
     json: () =>
       Promise.resolve({
