@@ -2,18 +2,18 @@ const starWarsSpecies = async personId => {
   let species = null;
 
   if (personId === 1) {
-    species = await Promise.resolve({
+    species = Promise.resolve({
       name: 'Human',
       classification: 'mammal'
     });
   } else {
-    species = await Promise.resolve({
+    species = Promise.resolve({
       name: 'Droid',
       classification: 'artificial'
     });
   }
 
-  return species;
+  return await species;
 };
 
 module.exports = { starWarsSpecies };
